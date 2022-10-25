@@ -5,46 +5,120 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
+console.log(new Date())
 
 const displayDate = () => {
   const currentDate = new Date()
-
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
+
+
+
 
 // Write a JavaScript program to convert a number to a string.
 
 
+const numToString = (num) => {
+  return num.toString()
+}
 
 // Write a JavaScript program to convert a string to the number.
 
-
+   const stringToNum = (string) => {
+    return parseInt(string)
+  }
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
+  const findType = (a) => {
+    return typeof(a);
+  }
+  console.log("******* ", parseInt("puppy"))
+// this can be used for all different datatypes
+  
+  counter = false; 
+console.log(typeof(counter)); // "boolean"
   // * Null
+  console.log(null == undefined); // true
   // * Undefined
+  // let counter;
+console.log(counter);        // undefined
+console.log(typeof counter); // undefined
   // * Number
+  // let counter = 120;
+console.log(typeof(counter)); // "number"
   // * NaN
+
   // * String
+  counter = "Hi";
+console.log(typeof(counter)); // "string"
   
 
-  
-// Write a JavaScript program that adds 2 numbers together.
+let firstNum = null
+let secondNum = null
+let operation = null
 
+const saveFirstNumber = (num) => {
+  firstNum = parseInt(num)  
+}
 
+const saveSecondNumber = (num) => {
+  secondNum = parseInt(num)
+}
+
+// this function takes in two argument/numbers and returns the sum of them
+const add = (numA, numB) => {
+  const sum = numA + numB
+  return sum
+}
+
+function changeOperation(chosenOperation){
+  console.log("chosenOperation", chosenOperation)
+  operation = chosenOperation
+  console.log("operation", operation)
+  console.log(operation)
+}
+
+const putResultInElement = (operationResults) => {
+  document.getElementById("result").innerHTML = "Results: " + operationResults
+}
+
+const equals = () => {
+  switch (operation) {
+    case "addition":  putResultInElement(add(firstNum, secondNum)) 
+    break;
+    default: "Choose an operation"
+  }
+}
 
 // Write a JavaScript program that runs only when 2 things are true.
 
 
+
+// function trueTwo(a, b, c){ 
+//   if(a === b && c > b){
+//     return true;
+//   }
+// }
+// console.log("@@@@@",trueTwo(x, y, z));
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
 
 
 // Write a JavaScript program that runs when both things are not true.  
+let x = false;
+let y = false;
+// let z = 17;
+
+
+function falseTwo(a, b){ 
+  if(a == false && b == false){
+    return " these are false";
+  }
+}
+console.log("@@@@@",falseTwo(x, y));
+
 
 // ***************************
 //         PART TWO
